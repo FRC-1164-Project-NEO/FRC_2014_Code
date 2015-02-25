@@ -1,0 +1,183 @@
+oneBallBallLoaded
+
+rollerUp(F)
+//or is it down?
+armCatapult()
+driveForwardFast(7.5)
+// do not know about 7.5 feet
+
+if (reliable)
+   if (hot)
+        fire()
+        driveTurn(180)
+        waitAutoTime(1000)
+        // is that the right command?
+    end()
+waitAutoTime(5500)
+fire()
+driveTurn(90)
+
+STOP
+
+twoBallTakeSecondWithHot
+
+rollerUp(F)
+rollerSpeed(.75)
+wait(750)
+rollerSpeed(0)
+//pulls second ball in
+
+driveForward(7.5)
+if (reliable)
+       if (leftGoal)
+             driveTurn(-30)
+        else()
+              driveTurn(30)
+        end()
+else()
+         driveTurn(30)
+         // if not reliable fire into right goal
+end()
+
+// pull ball out and fire
+rollerSpeed(.-5)
+wait(500)
+rollerSpeed(0)
+armCatapult()
+waitForArmed()
+fire()
+
+// setup for next firing
+armCatapult() 
+rollerSpeed(1)
+wait(250)
+
+if (reliable)
+      if (leftGoal)
+              driveTurnFast(60)
+       else()
+              driveTurnFast(-60)
+       end()
+// if not reliable just fire again
+end()
+
+fire()
+rollerSpeed(0)
+
+// if you have more time turn aroung
+driveTurn(180)
+
+STOP
+
+twoBallCenterHotBackAndForth
+
+rollerDown(T)
+armCatapult()
+driveForwardFast(7.5)
+
+if (reliable)
+     if (leftGoal)
+            driveTurn(-30)
+             fire()
+             armCatapult()
+             driveTurn(30)
+      else()
+            driveTurn(30)
+             fire()
+             armCatapult()
+             driveTurn(-30)
+else()
+       driveTurn(30)
+        fire()
+        armCatapult()
+        driveTurn(-30)
+end()
+
+rollerSpeed(1)
+driveForwardFast(-8)
+driveForwardFast(8)
+rollerSpeed(0)
+
+if (reliable)
+       if (leftGoal)
+             driveTurnFast(30)
+       else()
+              driveTurnFast(-30)
+        end()
+else()
+       driveTurnFast(30)
+end()
+
+fire()
+
+STOP
+
+justDriveForward
+
+rollerDown(T)
+driveForward(7.5)
+
+STOP
+
+testAuto
+
+rollerDown(T)
+armCatapult()
+wait(250)
+stopCatapult()
+
+STOP
+
+singleBallLowGoalWithHot
+
+lowerRoller(T)
+armCatapult()
+
+driveForwardFast(16.75)
+// distance should be 17.15
+
+if (hot)
+else()
+       waitAutoTime(6000)
+end()
+
+waitTillArm()
+// just to make sure it doesn't fire until ready although it shouldn't do that anyways
+fire()
+
+STOP
+
+twoBallLowGoalShootHigh
+
+lowerRoller(T)
+waitTillClear()
+armCatapult()
+wait(500)
+// needs to be tuned
+stopCatapult()
+
+// grabs ball
+rollerSpeed(1)
+wait(500)
+rollerSpeed(0)
+
+driveForwardFast(16.75)
+// not sure of the distance
+
+// pulls ball out of robot
+rollerSpeed(-.5)
+wait(250)
+rollerSpeed(0)
+
+// fire and rearm
+fire()
+armCatapult()
+waitTillArm()
+
+// pull ball in and fire
+rollerSpeed(1)
+wait(1000)
+fire()
+
+STOP
+

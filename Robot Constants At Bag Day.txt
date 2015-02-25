@@ -1,0 +1,89 @@
+// all of the constants are pretty much made up right now
+ 
+// Drive PID Constants----------------------------------------------
+driveStraightHighP	.0045
+driveStraightHighI	0.002
+// .03
+driveStraightHighD	0.004
+//.01 i think
+ 
+driveTurnHighP	0.03
+// .09
+driveTurnHighI	0.006
+//.005
+driveTurnHighD	0.001
+//.001
+ 
+driveStraightLowP	0.0
+driveStraightLowI	0.0
+driveStraightLowD	0
+ 
+driveTurnLowP	0
+driveTurnLowI	0.0
+driveTurnLowD	0
+ 
+ 
+//Other Autonmous Drive constants
+turnDeadband	2
+straightDeadband	60
+milisecondsToWaitInDeadband	250
+ 
+ 
+// Automatic Transmission Constants --------------------------------
+ 
+miliSecondsBeforeShift	500
+// probably right ish
+maxRobotSpeed	20.25
+// needs to be found out
+upShiftPoint	7.25
+// guess bassed off of gear ratios
+upShiftAccel	5
+// FPS per second^2
+ 
+commandedThrottleShiftPointGain	1.20
+// 20% more
+ 
+kickDownShiftPoint	6.75
+// guess bassed off of gear ratios
+kickDownAccel	-8.0
+// FPS per ^second
+kickDownSlowestThrottle	.8
+// pretty good guess
+ 
+coastDownShiftPoint	2.5
+// just a guess
+ 
+encoderPulsesPerFoot	327.4
+// found from data
+// 309.7 maybe
+ 
+amountOfTurnBeforeTurning	.05
+// ehhhhh
+ 
+// Other Drive COnstants----------------------------------------
+ 
+cheezyDrive	0
+// 0.0 means arcade drive other wise it is cheezy
+ 
+presicionGain	0.5
+turnGain	-0.5
+ 
+manualShifting	1
+//0 means auto shifting probably should be removed before competetion
+ 
+ 
+// Catapult Constants---------------------------------------------------
+ 
+timeToWenchBack	4000
+timeToFire	1000
+wenchMotorSpeed	.75
+rollerGain	-.75
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+FireBallIntoHighGoalLeftSide
+
+if (reliable)
+	if (rightGoal)
+		wait(5500)
+	end()
+end()
+fire()
+
+STOP
+
+TwoBallBehindYouWithHotSpotFromCenter
+
+driveForward(5)
+run(CenterForwardFireBallRotateCenter)
+driveForward(-5)
+driveForward(5)
+run(CenterForwardFireBallRotateCenter)
+
+STOP
+
+CenterForwardFireBallRotateCenter
+
+// This will turn the robot to the correct angle based off of the hot spot
+// then will fire and turn back to the center
+
+if (reliable)
+	if (leftGoal)
+		driveTurn(-45)
+		fire()
+		wait(250)
+		driveTurn(45)
+	else()
+		driveTurn(45)
+		fire()
+		wait(250)
+		driveTurn(-45)
+	end()
+else()
+	driveTurn(45)
+	fire()
+	wait(250)
+	driveTurn(-45)
+end()
+
+STOP
+
+ARGH
+
+doNothing()
+//ARGH!!!!!!!!!!!!!!!!!
+//AUGH!!!!
+
+STOP
+
+New
+
+// MUAHAHAHAHAHAHAHAHAHAHA
+
+STOP
+
